@@ -1,0 +1,3 @@
+<view class="container">
+	<button catchtap="goList" type="primary" data-index="1">调用接口</button>
+</view>

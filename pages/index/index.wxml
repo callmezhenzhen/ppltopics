@@ -1,3 +1,0 @@
-<view class="container">
-	<button catchtap="searchByKeyWords" type="primary">调用接口</button>
-</view>

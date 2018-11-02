@@ -1,6 +1,7 @@
 {
 	"pages": [
-		"pages/index/index"
+		"pages/zhihu/index/index",
+		"pages/zhihu/list/list"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
