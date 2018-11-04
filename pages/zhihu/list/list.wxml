@@ -1,0 +1,17 @@
+<view class="list-main">
+    <view 
+        wx:for="{{list}}"
+        wx:for-item="topic"
+        wx:key="answer_id"
+        catchtap="goDetail"
+        class="list-item"
+        data-link="{{topic.linkUrl}}"
+    >
+        <view class="li-title">{{topic.title}}</view>
+        <view class="li-author-ex">{{topic.author_name}}:{{topic.excerpt}}</view>
+        <view class="li-vt-cm">
+            <view class="li-vote">{{topic.voteup_count}}赞同</view>
+            <view class="li-comment">{{topic.comment_count}}评论</view>
+        </view>
+    </view>
+</view>

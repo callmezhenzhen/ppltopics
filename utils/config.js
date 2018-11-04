@@ -1,5 +1,5 @@
 let prodUrl = '';
-let devUrl = 'http://127.0.0.1:10349/';
+let devUrl = 'http://192.168.0.101:10349/';
 
 
 module.exports = {

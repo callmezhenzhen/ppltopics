@@ -9,12 +9,6 @@ function ajax(options) {
 	options.type = (options.type || "GET").toUpperCase();
 
 	/**
-	 * dataType
-	 */
-	options.dataType = options.dataType || 'json';
-
-
-	/**
 	 * set url
 	 */
 	let url = config.urlPrefix + options.url;
@@ -46,17 +40,43 @@ function apiGet(url, data, callback) {
 	});
 }
 
-function setAjaxData(data) {
-	let array = [];
-
-	for (let key in data) {
-		array.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+function getBackData(isOk, res) {
+	if (!isOk) {
+		return false
 	}
-	
-	return array.join('&')
+
+	if (res && res.data) {
+		return res.data
+	}
+
+	return false
+}
+
+function showLoading(msg) {
+	wx.showLoading({
+		title: msg || '加载中',
+		mask: true
+	}); 
+}
+
+function hideLoading() {
+	wx.hideLoading();
+}
+
+function showToast(title, duration) {
+	wx.showToast({
+		title: title || '',
+		duration: duration || 1500,
+		mask: true,
+		icon: 'none'
+	});
 }
 
 module.exports = {
 	ajax: ajax,
-	apiGet: apiGet
+	apiGet: apiGet,
+	getBackData: getBackData,
+	showLoading: showLoading,
+	hideLoading: hideLoading,
+	showToast: showToast
 }

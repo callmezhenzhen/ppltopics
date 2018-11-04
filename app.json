@@ -1,7 +1,8 @@
 {
 	"pages": [
 		"pages/zhihu/index/index",
-		"pages/zhihu/list/list"
+		"pages/zhihu/list/list",
+		"pages/zhihu/transfer/transfer"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
